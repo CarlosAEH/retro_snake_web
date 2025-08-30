@@ -1,11 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Página en GitHub Pages</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Política de Privacidad — Retro Snake</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; background: #0b1818; color: #e7f7f0; }
+    h1,h2 { color: #36d7b7; }
+    nav { margin-bottom: 20px; }
+    nav button { margin-right: 10px; padding: 6px 12px; border: 1px solid #36d7b7; background: transparent; color: #e7f7f0; cursor: pointer; border-radius: 6px; }
+    nav button.active { background: #36d7b7; color: #0b1818; }
+    a { color: #7ee9d5; }
+    section { margin: 24px 0; }
+  </style>
 </head>
 <body>
-  <h1>¡Hola, mundo!</h1>
-  <p>Esta es mi primera página en GitHub Pages 🚀</p>
+  <h1 id="title">Política de Privacidad</h1>
+  <nav>
+    <button data-lang="es" class="active">Español</button>
+    <button data-lang="en">English</button>
+  </nav>
+
+  <!-- Español -->
+  <div data-i18n="es">
+    <section>
+      <h2>Introducción</h2>
+      <p>Retro Snake (“la App”) respeta tu privacidad. Esta Política explica qué datos se recopilan y cómo se usan.</p>
+    </section>
+
+    <section>
+      <h2>Datos que recopilamos</h2>
+      <ul>
+        <li><strong>Datos personales directos:</strong> No recopilamos datos personales (nombre, correo, etc.).</li>
+        <li><strong>Datos técnicos y de dispositivo:</strong> Nuestros socios de publicidad (ej. Google AdMob) pueden recopilar identificadores de dispositivo, datos de uso o ubicación aproximada con fines de personalización, medición y prevención de fraude.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Uso de los datos</h2>
+      <p>Los datos recopilados se utilizan únicamente para mostrar anuncios dentro de la App y mejorar la experiencia del usuario. Retro Snake no vende ni comparte información personal.</p>
+    </section>
+
+    <section>
+      <h2>Publicidad</h2>
+      <p>La App integra anuncios de <strong>Google AdMob</strong>. Consulta las políticas de Google para más detalles:  
+      <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></p>
+    </section>
+
+    <section>
+      <h2>Niños</h2>
+      <p>La App puede ser usada por personas de todas las edades. Sin embargo, no está dirigida específicamente a menores de 13 años. En caso de uso por menores, debe hacerse bajo supervisión de un adulto. Los anuncios cumplen con las políticas de Google Play para Familias.</p>
+    </section>
+
+    <section>
+      <h2>Cambios</h2>
+      <p>Podemos actualizar esta Política de Privacidad en cualquier momento. La versión vigente siempre estará disponible en esta página.</p>
+    </section>
+
+    <section>
+      <h2>Contacto</h2>
+      <p>Si tienes dudas sobre esta política, escríbenos a:  
+      <a href="mailto:<!-- TODO: tu email de soporte -->">support@example.com</a></p>
+    </section>
+  </div>
+
+  <!-- English -->
+  <div data-i18n="en" hidden>
+    <section>
+      <h2>Introduction</h2>
+      <p>Retro Snake (“the App”) respects your privacy. This Policy explains what data is collected and how it is used.</p>
+    </section>
+
+    <section>
+      <h2>Data we collect</h2>
+      <ul>
+        <li><strong>Direct personal data:</strong> We do not collect personal data (name, email, etc.).</li>
+        <li><strong>Technical & device data:</strong> Our advertising partners (e.g. Google AdMob) may collect device identifiers, usage data, or approximate location for ad personalization, measurement, and fraud prevention.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Use of data</h2>
+      <p>Collected data is used solely to display ads within the App and improve user experience. Retro Snake does not sell or share personal information.</p>
+    </section>
+
+    <section>
+      <h2>Advertising</h2>
+      <p>The App integrates ads via <strong>Google AdMob</strong>. See Google’s policies for more details:  
+      <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></p>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <p>The App can be used by people of all ages. However, it is not specifically directed at children under 13. If used by minors, it must be under adult supervision. Ads comply with Google Play Families policies.</p>
+    </section>
+
+    <section>
+      <h2>Changes</h2>
+      <p>We may update this Privacy Policy at any time. The current version will always be available on this page.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>If you have questions about this policy, contact us at:  
+      <a href="mailto:<!-- TODO: your support email -->">support@example.com</a></p>
+    </section>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll("nav button");
+    const blocks = document.querySelectorAll("[data-i18n]");
+    buttons.forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        const lang = btn.dataset.lang;
+        buttons.forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+        blocks.forEach(div=>div.hidden = (div.dataset.i18n !== lang));
+        document.documentElement.lang = lang;
+        document.getElementById("title").textContent = lang==="es" ? "Política de Privacidad" : "Privacy Policy";
+      });
+    });
+  </script>
 </body>
 </html>
