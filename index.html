@@ -4,122 +4,179 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Política de Privacidad — Retro Snake</title>
+  <meta name="description" content="Política de privacidad de Retro Snake (ES/EN)" />
   <style>
-    body { font-family: system-ui, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; background: #0b1818; color: #e7f7f0; }
-    h1,h2 { color: #36d7b7; }
-    nav { margin-bottom: 20px; }
-    nav button { margin-right: 10px; padding: 6px 12px; border: 1px solid #36d7b7; background: transparent; color: #e7f7f0; cursor: pointer; border-radius: 6px; }
-    nav button.active { background: #36d7b7; color: #0b1818; }
-    a { color: #7ee9d5; }
-    section { margin: 24px 0; }
+    :root { --fg:#e7f7f0; --bg:#0b1818; --muted:#9db3ad; --accent:#36d7b7; --card:#0f1f1f; --border:#163433; }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6}
+    .wrap{max-width:960px;margin:0 auto;padding:24px}
+    header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+    h1{font-size:1.9rem;margin:.25rem 0 .2rem}
+    .muted{color:var(--muted)}
+    .brand{opacity:.85}
+    .lang{display:flex;gap:8px}
+    button{background:var(--card);border:1px solid var(--border);border-radius:10px;color:var(--fg);padding:8px 12px;cursor:pointer}
+    button[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 2px #1a2f2e inset}
+    section{margin:22px 0;padding:18px;border:1px solid var(--border);border-radius:12px;background:var(--card)}
+    h2{font-size:1.2rem;margin:.2rem 0 .8rem;color:var(--accent)}
+    a{color:#7ee9d5}
+    footer{margin:36px 0 12px;color:var(--muted)}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    ul{margin-top:.4rem}
   </style>
 </head>
 <body>
-  <h1 id="title">Política de Privacidad</h1>
-  <nav>
-    <button data-lang="es" class="active">Español</button>
-    <button data-lang="en">English</button>
-  </nav>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="brand muted">Retro Snake</div>
+        <h1 id="title">Política de Privacidad</h1>
+        <div class="muted">Última actualización: 2025-08-30</div>
+      </div>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="btn-es" aria-pressed="true" data-lang="es" class="mono">ES</button>
+        <button id="btn-en" aria-pressed="false" data-lang="en" class="mono">EN</button>
+      </div>
+    </header>
 
-  <!-- Español -->
-  <div data-i18n="es">
-    <section>
-      <h2>Introducción</h2>
-      <p>Retro Snake (“la App”) respeta tu privacidad. Esta Política explica qué datos se recopilan y cómo se usan.</p>
-    </section>
+    <!-- Español -->
+    <main data-i18n="es">
+      <section>
+        <h2>Introducción</h2>
+        <p><strong>Retro Snake</strong> (“la App”) respeta tu privacidad. Esta Política explica qué datos se recopilan y cómo se usan. Al utilizar la App, aceptas esta Política.</p>
+      </section>
 
-    <section>
-      <h2>Datos que recopilamos</h2>
-      <ul>
-        <li><strong>Datos personales directos:</strong> No recopilamos datos personales (nombre, correo, etc.).</li>
-        <li><strong>Datos técnicos y de dispositivo:</strong> Nuestros socios de publicidad (ej. Google AdMob) pueden recopilar identificadores de dispositivo, datos de uso o ubicación aproximada con fines de personalización, medición y prevención de fraude.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Datos que recopilamos</h2>
+        <ul>
+          <li><strong>Datos personales directos:</strong> No recopilamos datos personales (como nombre o correo) dentro de la App.</li>
+          <li><strong>Datos técnicos y de dispositivo:</strong> Nuestros socios de publicidad (p. ej., <span class="mono">Google AdMob</span>) pueden recopilar identificadores del dispositivo, información técnica, ubicación aproximada y datos de uso para personalización de anuncios, medición y prevención de fraude, conforme a sus propias políticas.</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Uso de los datos</h2>
-      <p>Los datos recopilados se utilizan únicamente para mostrar anuncios dentro de la App y mejorar la experiencia del usuario. Retro Snake no vende ni comparte información personal.</p>
-    </section>
+      <section>
+        <h2>Publicidad</h2>
+        <p>La App muestra anuncios (banners, interstitials y/o “app open ads”) proporcionados por terceros, como <strong>Google AdMob</strong>. Consulta las políticas de Google para más información:</p>
+        <p><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></p>
+      </section>
 
-    <section>
-      <h2>Publicidad</h2>
-      <p>La App integra anuncios de <strong>Google AdMob</strong>. Consulta las políticas de Google para más detalles:  
-      <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></p>
-    </section>
+      <section>
+        <h2>Niños</h2>
+        <p>La App no está dirigida específicamente a menores de 13 años. Si se usa por menores, debe hacerse bajo la supervisión de un adulto. Si declaras público menor de 13 en Google Play, asegúrate de cumplir con las políticas aplicables (por ejemplo, modo apto para familias y anuncios adecuados).</p>
+      </section>
 
-    <section>
-      <h2>Niños</h2>
-      <p>La App puede ser usada por personas de todas las edades. Sin embargo, no está dirigida específicamente a menores de 13 años. En caso de uso por menores, debe hacerse bajo supervisión de un adulto. Los anuncios cumplen con las políticas de Google Play para Familias.</p>
-    </section>
+      <section>
+        <h2>Uso de datos y retención</h2>
+        <p>Los datos recopilados por terceros se utilizan para mostrar anuncios y mejorar la experiencia. No vendemos información personal. Puedes desinstalar la App en cualquier momento para detener su uso.</p>
+      </section>
 
-    <section>
-      <h2>Cambios</h2>
-      <p>Podemos actualizar esta Política de Privacidad en cualquier momento. La versión vigente siempre estará disponible en esta página.</p>
-    </section>
+      <section>
+        <h2>Firebase Crashlytics</h2>
+        <p>Usamos Firebase Crashlytics para registrar fallos y mejorar la estabilidad. Crashlytics puede recopilar información técnica del dispositivo (modelo, versión de SO, estado de memoria), registros de fallos y datos de uso relacionados con el error. No utilizamos Crashlytics para identificarte personalmente.</p>
+        <p>Más información: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Política de privacidad de Firebase</a>.</p>
+      </section>
 
-    <section>
-      <h2>Contacto</h2>
-      <p>Si tienes dudas sobre esta política, escríbenos a:  
-      <a href="mailto:<!-- TODO: tu email de soporte -->">carlosaeh27@gmail.com</a></p>
-    </section>
-  </div>
+      <section>
+        <h2>Firebase Analytics</h2>
+        <p>Podemos usar Firebase Analytics para medir uso y rendimiento (pantallas vistas, eventos básicos del juego). Firebase Analytics utiliza identificadores de instancia de la app y puede asociar datos técnicos con fines estadísticos. No recopilamos información personal identificable mediante Analytics.</p>
+        <p>Más información: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Política de privacidad de Firebase</a>.</p>
+      </section>
+    
+      <section>
+        <h2>Transferencias y terceros</h2>
+        <p>Los proveedores de anuncios y analítica pueden procesar datos en servidores fuera de tu país, conforme a sus términos. Te recomendamos revisar sus políticas para detalles específicos.</p>
+      </section>
 
-  <!-- English -->
-  <div data-i18n="en" hidden>
-    <section>
-      <h2>Introduction</h2>
-      <p>Retro Snake (“the App”) respects your privacy. This Policy explains what data is collected and how it is used.</p>
-    </section>
+      <section>
+        <h2>Cambios en esta Política</h2>
+        <p>Podemos actualizar esta Política cuando sea necesario. Publicaremos la versión vigente en esta página con la fecha de actualización indicada arriba.</p>
+      </section>
 
-    <section>
-      <h2>Data we collect</h2>
-      <ul>
-        <li><strong>Direct personal data:</strong> We do not collect personal data (name, email, etc.).</li>
-        <li><strong>Technical & device data:</strong> Our advertising partners (e.g. Google AdMob) may collect device identifiers, usage data, or approximate location for ad personalization, measurement, and fraud prevention.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Contacto</h2>
+        <p>Si tienes dudas sobre esta Política, escríbenos a: <a href="mailto:carlosaeh27@gmail.com">carlosaeh27@gmail.com</a></p>
+      </section>
 
-    <section>
-      <h2>Use of data</h2>
-      <p>Collected data is used solely to display ads within the App and improve user experience. Retro Snake does not sell or share personal information.</p>
-    </section>
+      <footer>© 2025. Todos los derechos reservados.</footer>
+    </main>
 
-    <section>
-      <h2>Advertising</h2>
-      <p>The App integrates ads via <strong>Google AdMob</strong>. See Google’s policies for more details:  
-      <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></p>
-    </section>
+    <!-- English -->
+    <main data-i18n="en" hidden>
+      <section>
+        <h2>Introduction</h2>
+        <p><strong>Retro Snake</strong> (“the App”) respects your privacy. This Policy explains what data is collected and how it is used. By using the App, you agree to this Policy.</p>
+      </section>
 
-    <section>
-      <h2>Children</h2>
-      <p>The App can be used by people of all ages. However, it is not specifically directed at children under 13. If used by minors, it must be under adult supervision. Ads comply with Google Play Families policies.</p>
-    </section>
+      <section>
+        <h2>Data We Collect</h2>
+        <ul>
+          <li><strong>Direct personal data:</strong> We do not collect personal data (such as name or email) within the App.</li>
+          <li><strong>Technical & device data:</strong> Our advertising partners (e.g., <span class="mono">Google AdMob</span>) may collect device identifiers, technical information, approximate location, and usage data for ad personalization, measurement, and fraud prevention, under their own policies.</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Changes</h2>
-      <p>We may update this Privacy Policy at any time. The current version will always be available on this page.</p>
-    </section>
+      <section>
+        <h2>Advertising</h2>
+        <p>The App displays ads (banners, interstitials and/or app open ads) provided by third parties such as <strong>Google AdMob</strong>. See Google’s policies for more information:</p>
+        <p><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></p>
+      </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>If you have questions about this policy, contact us at:  
-      <a href="mailto:<!-- TODO: your support email -->">carlosaeh27@gmail.com</a></p>
-    </section>
+      <section>
+        <h2>Children</h2>
+        <p>The App is not specifically directed to children under 13. If used by minors, it must be under adult supervision. If your target audience includes children under 13 on Google Play, ensure you comply with applicable policies (e.g., families-appropriate mode and ads).</p>
+      </section>
+
+      <section>
+        <h2>Use of Data & Retention</h2>
+        <p>Data collected by third parties is used to display ads and improve user experience. We do not sell personal information. You can uninstall the App at any time to stop its use.</p>
+      </section>
+
+      <section>
+        <h2>Firebase Crashlytics</h2>
+        <p>We use Firebase Crashlytics to log crashes and improve stability. Crashlytics may collect technical device information (model, OS version, memory state), crash logs and usage data related to the error. We do not use Crashlytics to personally identify you.</p>
+        <p>Learn more: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a>.</p>
+      </section>
+
+      <section>
+        <h2>Firebase Analytics</h2>
+        <p>We may use Firebase Analytics to measure usage and performance (screen views, basic gameplay events). Firebase Analytics uses app instance identifiers and may associate technical data for statistical purposes. We do not collect personally identifiable information via Analytics.</p>
+        <p>Learn more: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a>.</p>
+      </section>
+
+      <section>
+        <h2>Transfers & Third Parties</h2>
+        <p>Ad and analytics providers may process data on servers outside your country, under their terms. We recommend reviewing their policies for specific details.</p>
+      </section>
+
+      <section>
+        <h2>Changes to this Policy</h2>
+        <p>We may update this Policy when necessary. We will publish the current version on this page with the update date shown above.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>If you have questions about this Policy, contact us at: <a href="mailto:carlosaeh27@gmail.com">carlosaeh27@gmail.com</a></p>
+      </section>
+
+      <footer>© 2025. All rights reserved.</footer>
+    </main>
   </div>
 
   <script>
-    const buttons = document.querySelectorAll("nav button");
-    const blocks = document.querySelectorAll("[data-i18n]");
-    buttons.forEach(btn=>{
-      btn.addEventListener("click",()=>{
-        const lang = btn.dataset.lang;
-        buttons.forEach(b=>b.classList.remove("active"));
-        btn.classList.add("active");
-        blocks.forEach(div=>div.hidden = (div.dataset.i18n !== lang));
-        document.documentElement.lang = lang;
-        document.getElementById("title").textContent = lang==="es" ? "Política de Privacidad" : "Privacy Policy";
-      });
-    });
+    // idioma inicial por navegador
+    const prefers = (navigator.language || 'es').toLowerCase().startsWith('en') ? 'en' : 'es';
+    const btnEs = document.getElementById('btn-es');
+    const btnEn = document.getElementById('btn-en');
+    const views = document.querySelectorAll('main[data-i18n]');
+    function setLang(lang){
+      views.forEach(v => v.hidden = (v.dataset.i18n !== lang));
+      btnEs.setAttribute('aria-pressed', String(lang==='es'));
+      btnEn.setAttribute('aria-pressed', String(lang==='en'));
+      document.documentElement.lang = lang;
+      document.getElementById('title').textContent = lang==='es' ? 'Política de Privacidad' : 'Privacy Policy';
+    }
+    btnEs.addEventListener('click', ()=>setLang('es'));
+    btnEn.addEventListener('click', ()=>setLang('en'));
+    setLang(prefers);
   </script>
 </body>
 </html>
